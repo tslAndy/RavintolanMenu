@@ -7,11 +7,10 @@ namespace GoodScripts
 {
     public class GoodUI : MonoBehaviour
     {
-        [SerializeField] private Good good;
         [SerializeField] private TMP_Text goodName, goodComposition, dietMarks, goodPrice;
         [SerializeField] private Toggle productChooseToggle;
 
-        private void Start()
+        public void InitGood(Good good)
         {
             goodName.SetText(good.GoodName);
             goodComposition.SetText(good.GoodComposition);
@@ -20,11 +19,11 @@ namespace GoodScripts
             productChooseToggle.onValueChanged.AddListener(
                 delegate
                 {
-                    OnProductToggleValueChanged();
+                    OnProductToggleValueChanged(good);
                 });
         }
 
-        private void OnProductToggleValueChanged()
+        private void OnProductToggleValueChanged(Good good)
         {
             if (productChooseToggle.isOn)
                 Shop.Instance.PutToShoppingCart(good);

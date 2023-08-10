@@ -24,7 +24,6 @@ namespace ShopScripts
             shopUI.UpdateTotalPrice(CountTotalPrice());
         }
 
-        private int CountTotalPrice() => _goods.Sum(good => good.GoodPrice);
+        private float CountTotalPrice() => _goods.Sum(good => good.GoodPrice);
     }
 }
-

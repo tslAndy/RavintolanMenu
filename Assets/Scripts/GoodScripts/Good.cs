@@ -8,11 +8,11 @@ namespace GoodScripts
     public class Good : ScriptableObject
     {
         [SerializeField] private string goodName, goodComposition, dietMarks;
-        [SerializeField] private int goodPrice;
+        [SerializeField] private float goodPrice;
 
         public string GoodName => goodName;
         public string GoodComposition => goodComposition;
         public string DietMarks => dietMarks;
-        public int GoodPrice => goodPrice;
+        public float GoodPrice => goodPrice;
     }
 }
