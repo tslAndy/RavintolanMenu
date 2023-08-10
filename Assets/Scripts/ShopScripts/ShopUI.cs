@@ -14,31 +14,44 @@ namespace ShopScripts
         [SerializeField] private Transform menuSectionTransform;
         [SerializeField] private GameObject foodMenuPrefab;
         [SerializeField] private GoodUI goodPrefab;
+        [SerializeField] private float yDistanceBetweenGoods;
 
         private Dictionary<FoodList, GameObject> _foodListMenu = new();
-        private FoodList currentFoodList = null;
+        private FoodList _currentFoodList = null;
 
         public void LoadMenu(FoodList foodList)
         {
             // if try to load same menu
-            if (foodList == currentFoodList)
+            if (foodList == _currentFoodList)
                 return;
 
             // if we already have spawned menu
             if (_foodListMenu.ContainsKey(foodList))
             {
-                // if another menu was loaded
-                if (currentFoodList != null)
-                    _foodListMenu[currentFoodList].SetActive(false);
+                _foodListMenu[_currentFoodList].SetActive(false);
 
                 // new food list
-                currentFoodList = foodList;
-                _foodListMenu[currentFoodList].SetActive(true);
+                _currentFoodList = foodList;
+                _foodListMenu[_currentFoodList].SetActive(true);
                 return;
             }
 
             // if should spawn menu
+            if (_currentFoodList != null)
+                _foodListMenu[_currentFoodList].SetActive(false);
+
+
             GameObject newMenu = Instantiate(foodMenuPrefab, menuSectionTransform);
+            Transform spawnStartTransform = newMenu.transform.GetChild(0);
+            for (int i = 0; i < foodList.Foods.Count; i++)
+            {
+                GoodUI good = Instantiate(goodPrefab, newMenu.transform);
+                good.InitGood(foodList.Foods[i]);
+                good.transform.position = spawnStartTransform.position + Vector3.down * yDistanceBetweenGoods * i;
+            }
+            _foodListMenu.Add(foodList, newMenu);
+            _currentFoodList = foodList;
+
         }
 
         public void UpdateTotalPrice(float price)

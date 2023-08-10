@@ -584,7 +584,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 356672846}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 882375911}
+        m_TargetAssemblyTypeName: ShopScripts.ShopUI, Assembly-CSharp
+        m_MethodName: LoadMenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 594a5c90989d89043985ca7fd3e220e7, type: 2}
+          m_ObjectArgumentAssemblyTypeName: FoodListScripts.FoodList, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &356672846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1557,8 +1569,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalPriceText: {fileID: 693144276}
   menuSectionTransform: {fileID: 2034043352}
-  foodMenuPrefab: {fileID: 7242263968762528359, guid: 6040730d9845af945b757fad7ef6929c, type: 3}
+  foodMenuPrefab: {fileID: 7934273339800043539, guid: 6040730d9845af945b757fad7ef6929c, type: 3}
   goodPrefab: {fileID: 8946609402421763997, guid: 1295de053e42a864b9465694d4cabcfb, type: 3}
+  yDistanceBetweenGoods: 60
 --- !u!114 &882375912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1799,7 +1812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1030483412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2019,7 +2032,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1195069244}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 882375911}
+        m_TargetAssemblyTypeName: ShopScripts.ShopUI, Assembly-CSharp
+        m_MethodName: LoadMenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 126cd08318717c1468dc28a8a389eb81, type: 2}
+          m_ObjectArgumentAssemblyTypeName: FoodListScripts.FoodList, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1195069244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2217,7 +2242,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1267227866}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 882375911}
+        m_TargetAssemblyTypeName: ShopScripts.ShopUI, Assembly-CSharp
+        m_MethodName: LoadMenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 8f0bf77d4b1e34f438608df54c387c4d, type: 2}
+          m_ObjectArgumentAssemblyTypeName: FoodListScripts.FoodList, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1267227866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2532,7 +2569,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0, g: 0.4245283, b: 0.004206716, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.39215687}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2554,7 +2591,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1514053407}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 882375911}
+        m_TargetAssemblyTypeName: ShopScripts.ShopUI, Assembly-CSharp
+        m_MethodName: LoadMenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: d54f230cc8b203e44a59d238f550883f, type: 2}
+          m_ObjectArgumentAssemblyTypeName: FoodListScripts.FoodList, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1514053407
 MonoBehaviour:
   m_ObjectHideFlags: 0

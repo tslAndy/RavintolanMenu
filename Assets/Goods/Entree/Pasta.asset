@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a99d18cd2cf28604c83e9ed5f145bafd, type: 3}
-  m_Name: Appetizer
+  m_Script: {fileID: 11500000, guid: b6c8bbc33214bc54799ef63f712346fc, type: 3}
+  m_Name: Pasta
   m_EditorClassIdentifier: 
-  foods:
-  - {fileID: 11400000, guid: 9210069f0182efb47afd7ef636c48da7, type: 2}
-  - {fileID: 11400000, guid: 83ff5b6535545194aba0bc719194f30e, type: 2}
+  goodName: Pasta Bolognese
+  goodComposition: Spagettia, bolognesekastiketta ja parmesaanilastuja
+  dietMarks: (Laktoositon, vegaaninen)
+  goodPrice: 13
