@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c8bbc33214bc54799ef63f712346fc, type: 3}
   m_Name: Cola
   m_EditorClassIdentifier: 
-  goodName: 'Cola '
+  goodName: Cola
   goodComposition: Mix with all previous drinks and drink!
   dietMarks: 
   goodPrice: 3

@@ -16,9 +16,8 @@ public static class SaveSystem
         stream.Close();
     }
 
-    public static Order LoadOrder(string orderName)
+    private static Order LoadOrder(string path)
     {
-        string path = Path.Combine(Application.persistentDataPath, "Orders", orderName);
         if (!File.Exists(path))
             return null;
 
@@ -26,5 +25,15 @@ public static class SaveSystem
         FileStream stream = new FileStream(path, FileMode.Open);
         Order order = binaryFormatter.Deserialize(stream) as Order;
         return order;
+    }
+
+    public static Order[] LoadAllOrders()
+    {
+        string path = Path.Combine(Application.persistentDataPath, "Orders");
+        string[] orderPaths = Directory.GetFiles(path);
+        Order[] orders = new Order[orderPaths.Length];
+        for (int i = 0; i < orders.Length; i++)
+            orders[i] = LoadOrder(orderPaths[i]);
+        return orders;
     }
 }

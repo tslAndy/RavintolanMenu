@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c8bbc33214bc54799ef63f712346fc, type: 3}
   m_Name: Punaviini
   m_EditorClassIdentifier: 
-  goodName: 'Punaviini '
+  goodName: Punaviini
   goodComposition: For alcoholics
   dietMarks: 
   goodPrice: 7

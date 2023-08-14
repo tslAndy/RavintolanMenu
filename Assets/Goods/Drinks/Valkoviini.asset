@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c8bbc33214bc54799ef63f712346fc, type: 3}
   m_Name: Valkoviini
   m_EditorClassIdentifier: 
-  goodName: 'Valkoviini '
+  goodName: Valkoviini
   goodComposition: For alcoholics with good taste
   dietMarks: 
   goodPrice: 7
