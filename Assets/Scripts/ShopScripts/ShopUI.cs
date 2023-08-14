@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -10,13 +10,14 @@ namespace ShopScripts
 {
     public class ShopUI : MonoBehaviour
     {
+        [SerializeField] private string currency;
         [SerializeField] private TMP_Text totalPriceText;
         [SerializeField] private Transform menuSectionTransform;
         [SerializeField] private GameObject foodMenuPrefab;
         [SerializeField] private GoodUI goodPrefab;
         [SerializeField] private float yDistanceBetweenGoods;
 
-        private Dictionary<FoodList, GameObject> _foodListMenu = new();
+        private readonly Dictionary<FoodList, GameObject> _foodListMenu = new();
         private FoodList _currentFoodList = null;
 
         public void LoadMenu(FoodList foodList)
@@ -47,7 +48,7 @@ namespace ShopScripts
             {
                 GoodUI good = Instantiate(goodPrefab, newMenu.transform);
                 good.InitGood(foodList.Foods[i]);
-                good.transform.position = spawnStartTransform.position + Vector3.down * yDistanceBetweenGoods * i;
+                good.transform.position = spawnStartTransform.position + i * yDistanceBetweenGoods * Vector3.down;
             }
             _foodListMenu.Add(foodList, newMenu);
             _currentFoodList = foodList;
@@ -56,7 +57,7 @@ namespace ShopScripts
 
         public void UpdateTotalPrice(float price)
         {
-            totalPriceText.SetText(price.ToString());
+            totalPriceText.SetText($"Total: {String.Format("{0:0.00}", price)} {currency}");
         }
     }
 }

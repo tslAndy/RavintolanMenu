@@ -910,7 +910,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0381a0ba5eec40e4e8b056cbc18e7c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  good: {fileID: 0}
+  panelBackground: {fileID: 6178690279864180390}
+  idleColor: {r: 1, g: 1, b: 1, a: 0.9411765}
+  choosenColor: {r: 0, g: 0.6509434, b: 0, a: 0.9411765}
   goodName: {fileID: 4367369588731146670}
   goodComposition: {fileID: 5801891685860379998}
   dietMarks: {fileID: 8150326106825069140}

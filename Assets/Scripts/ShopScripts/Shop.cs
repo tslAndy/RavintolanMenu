@@ -10,7 +10,7 @@ namespace ShopScripts
     {
         [SerializeField] private ShopUI shopUI;
 
-        private List<Good> _goods = new();
+        private readonly List<Good> _goods = new();
 
         public void PutToShoppingCart(Good good)
         {
