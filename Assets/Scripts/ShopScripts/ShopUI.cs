@@ -11,6 +11,7 @@ namespace ShopScripts
     public class ShopUI : MonoBehaviour
     {
         [SerializeField] private string currency;
+        [SerializeField] private TMP_Text nameText;
         [SerializeField] private TMP_Text totalPriceText;
         [SerializeField] private Transform menuSectionTransform;
         [SerializeField] private GameObject foodMenuPrefab;
@@ -58,6 +59,11 @@ namespace ShopScripts
         public void UpdateTotalPrice(float price)
         {
             totalPriceText.SetText($"Total: {String.Format("{0:0.00}", price)} {currency}");
+        }
+
+        public void Order()
+        {
+            Shop.Instance.Order(nameText.text);
         }
     }
 }
