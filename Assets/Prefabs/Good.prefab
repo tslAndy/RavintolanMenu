@@ -912,7 +912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelBackground: {fileID: 6178690279864180390}
   idleColor: {r: 1, g: 1, b: 1, a: 0.39215687}
-  choosenColor: {r: 0, g: 1, b: 0, a: 0.39215687}
+  choosenColor: {r: 0.3019608, g: 0.6313726, b: 0.40392157, a: 0.39215687}
   goodName: {fileID: 4367369588731146670}
   goodComposition: {fileID: 5801891685860379998}
   dietMarks: {fileID: 8150326106825069140}
