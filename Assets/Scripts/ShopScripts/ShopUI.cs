@@ -63,7 +63,7 @@ namespace ShopScripts
 
         public void Order()
         {
-            Shop.Instance.Order(nameText.text);
+            Shop.Instance.MakeOrder(nameText.text);
         }
     }
 }

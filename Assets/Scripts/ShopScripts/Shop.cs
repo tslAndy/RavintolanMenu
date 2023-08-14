@@ -26,11 +26,10 @@ namespace ShopScripts
 
         private float CountTotalPrice() => _goods.Sum(good => good.GoodPrice);
 
-        public void Order(string customerName)
+        public void MakeOrder(string customerName)
         {
-            Debug.Log(customerName);
-            Debug.Log(CountTotalPrice());
-            Debug.Log(_goods);
+            Order order = new Order(_goods, customerName, CountTotalPrice());
+            SaveSystem.SaveOrder(order);
         }
     }
 }
