@@ -6,15 +6,14 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class SaveSystem
 {
-    private static int orderNumber = 0;
     public static void SaveOrder(Order order)
     {
+
         BinaryFormatter formatter = new();
-        string path = Path.Combine(Application.persistentDataPath, "Orders", $"{order}_{orderNumber}");
+        string path = Path.Combine(Application.persistentDataPath, "Orders", $"{order}_{order.GetHashCode()}");
         FileStream stream = new FileStream(path, FileMode.Create);
         formatter.Serialize(stream, order);
         stream.Close();
-        orderNumber++;
     }
 
     public static Order LoadOrder(string orderName)

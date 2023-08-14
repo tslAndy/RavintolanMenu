@@ -3,6 +3,7 @@ using UnityEngine;
 using Utils;
 using GoodScripts;
 using System.Linq;
+using System.Collections;
 
 namespace ShopScripts
 {
@@ -30,6 +31,13 @@ namespace ShopScripts
         {
             Order order = new Order(_goods, customerName, CountTotalPrice());
             SaveSystem.SaveOrder(order);
+            StartCoroutine(ShopReloadCoroutine());
+        }
+
+        private IEnumerator ShopReloadCoroutine()
+        {
+            yield return new WaitForSeconds(1);
+            SceneLoader.LoadScene("Shop");
         }
     }
 }
