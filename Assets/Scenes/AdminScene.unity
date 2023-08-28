@@ -772,8 +772,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 015356ccda663e1439792de1690851e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loginText: {fileID: 1910843479}
-  passwordText: {fileID: 802407540}
+  login: {fileID: 2026422371}
+  password: {fileID: 1076139129}
   OrderLoader: {fileID: 1753432032}
 --- !u!1 &667204150
 GameObject:
@@ -1253,8 +1253,8 @@ MonoBehaviour:
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 7
-  m_InputType: 2
+  m_ContentType: 0
+  m_InputType: 0
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0

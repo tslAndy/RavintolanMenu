@@ -5,13 +5,14 @@ using TMPro;
 
 public class Authentication : MonoBehaviour
 {
-    [SerializeField] TMP_Text loginText, passwordText;
+    [SerializeField] TMP_InputField login, password;
     [SerializeField] private GameObject OrderLoader;
 
     public void Login()
     {
-        if (loginText.text == "admin" &&
-        passwordText.text == "admin")
+
+        if (login.text == "admin" &&
+        password.text == "admin")
         {
             OrderLoader.SetActive(true);
             gameObject.SetActive(false);
